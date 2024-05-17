@@ -6,6 +6,8 @@ ZDI Advisory Explorer is a Streamlit application designed to help you quickly so
 
 - **Filter by Year**: Select multiple years to filter advisories.
 - **Keyword Search**: Search advisories by keywords in titles and summaries.
+- **Saved Searches**: Save your search filters and quickly apply them later.
+- **Bookmark Advisories**: Bookmark specific advisories for quick access.
 - **Download Data**: Download filtered advisories as CSV or Excel files.
 - **Visualizations**: View interactive charts of the number of advisories per year and their distribution.
 - **Expandable Details**: Expand advisories to view detailed information.
@@ -60,5 +62,3 @@ ZDI Advisory Explorer is a Streamlit application designed to help you quickly so
 ## About
 
 I created ZDI Advisory Explorer to help quickly sort and understand the types of vulnerabilities that bug bounty programs, such as ZDI, are looking for. The [ZDI advisory section](https://www.zerodayinitiative.com/advisories/published/) on their website allows searching for advisories one year at a time, but provides RSS access for previous years. This tool aggregates these advisories and aids in focusing on target applications for auditing N-day and 0-day vulnerabilities.
-
-
