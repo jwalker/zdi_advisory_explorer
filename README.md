@@ -2,7 +2,7 @@
 
 ZDI Advisory Explorer is a Streamlit application designed to help you quickly sort and understand the types of vulnerabilities that bug bounties such as ZDI are looking for. The app allows you to filter, search, and visualize advisories, making it easier to hone in on target applications for auditing N-day and 0-day vulnerabilities.
 
-![Demo Video](ZDI Advisory Explorer.mp4)
+![Demo Video]("ZDI Advisory Explorer.mp4")
 
 ## Features
 
