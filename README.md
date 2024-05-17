@@ -59,6 +59,9 @@ ZDI Advisory Explorer is a Streamlit application designed to help you quickly so
     streamlit run app.py
     ```
 
+![Demo](https://www.loom.com/share/9a4b8cccd30b42edbaed0a4321da6a7b)
+
+
 ## About
 
 I created ZDI Advisory Explorer to help quickly sort and understand the types of vulnerabilities that bug bounty programs, such as ZDI, are looking for. The [ZDI advisory section](https://www.zerodayinitiative.com/advisories/published/) on their website allows searching for advisories one year at a time, but provides RSS access for previous years. This tool aggregates these advisories and aids in focusing on target applications for auditing N-day and 0-day vulnerabilities.
