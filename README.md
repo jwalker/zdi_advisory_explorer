@@ -4,7 +4,6 @@ ZDI Advisory Explorer is a Streamlit application designed to help you quickly so
 
 [![Demo Video](https://cdn.loom.com/sessions/thumbnails/9a4b8cccd30b42edbaed0a4321da6a7b-with-play.gif)](https://www.loom.com/share/9a4b8cccd30b42edbaed0a4321da6a7b)
 
-
 ## Features
 
 - **Filter by Year**: Select multiple years to filter advisories.
@@ -14,6 +13,7 @@ ZDI Advisory Explorer is a Streamlit application designed to help you quickly so
 - **Download Data**: Download filtered advisories as CSV or Excel files.
 - **Visualizations**: View interactive charts of the number of advisories per year and their distribution.
 - **Expandable Details**: Expand advisories to view detailed information.
+- **Clickable CVE Numbers**: Click on CVE numbers to view detailed information on the CVE website.
 
 ## Installation
 
@@ -36,24 +36,24 @@ ZDI Advisory Explorer is a Streamlit application designed to help you quickly so
 
 ## Usage
 
-### Update the RSS Feeds
+### Update the JSON Feeds
 
-1. Run the `update_rss_feeds.py` script to fetch and store the latest advisories:
+1. Run the `update_json_feeds.py` script to fetch and store the latest advisories:
     ```sh
-    python update_rss_feeds.py
+    python update_json_feeds.py
     ```
 
-2. Set up a cron job to run the `update_rss_feeds.py` script daily to keep the data up to date. Open the crontab editor:
+2. Set up a cron job to run the `update_json_feeds.py` script daily to keep the data up to date. Open the crontab editor:
     ```sh
     crontab -e
     ```
 
 3. Add the following line to schedule the script to run daily at midnight:
     ```sh
-    0 0 * * * /usr/bin/python3 /path/to/update_rss_feeds.py
+    0 0 * * * /path/to/your/venv/bin/python /path/to/update_json_feeds.py
     ```
 
-    Replace `/usr/bin/python3` with the path to your Python interpreter and `/path/to/update_rss_feeds.py` with the path to the script.
+    Replace `/path/to/your/venv/bin/python` with the path to your Python interpreter inside the virtual environment and `/path/to/update_json_feeds.py` with the path to the script.
 
 ### Run the Streamlit App
 
