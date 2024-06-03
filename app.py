@@ -160,6 +160,20 @@ with tab2:
     fig2 = px.pie(advisories_per_year, names='published_date', values='count', title='Advisory Distribution by Year')
     st.plotly_chart(fig2)
 
+    st.subheader("Number of Vulnerabilities per Product")
+    # Flatten products into individual rows
+    flattened_products = filtered_data.explode('products')
+    products_per_year = flattened_products.groupby([flattened_products['published_date'].str[:4], 'products']).size().reset_index(name='count')
+    fig3 = px.bar(products_per_year, x='published_date', y='count', color='products', title='Number of Vulnerabilities per Product')
+    st.plotly_chart(fig3)
+
+    st.subheader("Trends in Vulnerabilities per Vendor")
+    # Flatten vendors into individual rows
+    flattened_vendors = filtered_data.explode('response_vendors')
+    vendors_per_year = flattened_vendors.groupby([flattened_vendors['published_date'].str[:4], 'response_vendors']).size().reset_index(name='count')
+    fig4 = px.line(vendors_per_year, x='published_date', y='count', color='response_vendors', title='Trends in Vulnerabilities per Vendor')
+    st.plotly_chart(fig4)
+
 with tab3:
     st.header("Bookmarked Advisories")
     for index, bookmark in enumerate(st.session_state['bookmarks']):
